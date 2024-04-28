@@ -27,7 +27,9 @@ const config: Config = {
         bgLight: colors.gray[50],
         bgDark: "#4b6584",
         textLight: colors.gray[800],
-        textDark: colors.gray[200]
+        textDark: colors.gray[200],
+        divLeftBlur: "#fbe2b3",
+        divRightBlur: "#dbd7fb"
       },
     },
   },
