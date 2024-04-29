@@ -18,8 +18,8 @@ const config: Config = {
         monserrat: ["var(--font-monserrat)"],
       },
       colors: {
-        primary: "#fa8231",
-        primaryHover: "#fd9644",
+        primary: colors.gray[900],
+        primaryHover: colors.gray[950],
         secondary: "#3867d6",
         secondaryHover: "#4b7bec",
         tertiary: "#8854d0",
