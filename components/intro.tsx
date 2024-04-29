@@ -4,6 +4,11 @@ import Image from 'next/image'
 import { motion } from 'framer-motion' 
 import  profileImage from '@/public/sebastian-image.jpg'
 
+import Link from 'next/link'
+import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
+import { HiDownload } from 'react-icons/hi'
+import { FaGithubSquare } from 'react-icons/fa'
+
 type Props = {}
 
 export function Intro({}: Props) {
@@ -33,6 +38,37 @@ export function Intro({}: Props) {
             building <span className="italic">sites & apps</span>. My focus is{" "}
             <span className="underline">React (Next.js)</span>.
       </motion.h1>
+      <motion.div 
+        className='flex flex-col gap-2 sm:flex-row'
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
+        <Link href='#contact' className='group bg-primary text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 hover:bg-primaryHover transition cursor-pointer'>
+          Contact me here <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
+        </Link>
+        <a 
+          className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 transition cursor-pointer'
+          href='/cv.pdf'
+          download
+        >
+          Download CV <HiDownload className='opacity-70 group-hover:translate-y-1 transition'/>
+        </a>
+        <a 
+          className='group bg-white px-4 py-4 text-gray-700 text-[1.35rem] flex items-center justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 hover:scale-105'
+          href='https://www.linkedin.com/in/sebastiansanchezisame/'
+          target='_blank'
+        >
+          <BsLinkedin className='group-hover:-translate-y-1 transition'/>
+        </a>
+        <a 
+          className='group bg-white px-4 py-4 text-gray-700 text-[1.65rem] flex items-center justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 hover:scale-105'
+          href='https://github.com/SebaSanchezI'
+          target='_blank'
+        >
+          <FaGithubSquare className='group-hover:-translate-y-1 transition' />
+        </a>
+      </motion.div>
     </section>
   )
 }
