@@ -48,25 +48,25 @@ export function Intro({}: Props) {
           Contact me here <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
         </Link>
         <a 
-          className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 transition cursor-pointer'
+          className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 transition cursor-pointer border border-black/10'
           href='/cv.pdf'
           download
         >
           Download CV <HiDownload className='opacity-70 group-hover:translate-y-1 transition'/>
         </a>
         <a 
-          className='group bg-white px-4 py-4 text-gray-700 text-[1.35rem] flex items-center justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 hover:scale-105'
+          className='bg-white px-4 py-4 text-gray-700 text-[1.35rem] flex items-center justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 hover:scale-[1.15] border border-black/10 hover:text-gray-950'
           href='https://www.linkedin.com/in/sebastiansanchezisame/'
           target='_blank'
         >
-          <BsLinkedin className='group-hover:-translate-y-1 transition'/>
+          <BsLinkedin />
         </a>
         <a 
-          className='group bg-white px-4 py-4 text-gray-700 text-[1.65rem] flex items-center justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 hover:scale-105'
+          className='bg-white px-4 py-4 text-gray-700 text-[1.65rem] flex items-center justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 hover:scale-[1.15] border border-black/10 hover:text-gray-950'
           href='https://github.com/SebaSanchezI'
           target='_blank'
         >
-          <FaGithubSquare className='group-hover:-translate-y-1 transition' />
+          <FaGithubSquare />
         </a>
       </motion.div>
     </section>
