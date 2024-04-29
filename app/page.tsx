@@ -1,10 +1,11 @@
-import { Intro, SectionDivider } from "@/components";
+import { About, Intro, SectionDivider } from "@/components";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Intro />
       <SectionDivider />
+      <About />
     </main>
   );
 }
