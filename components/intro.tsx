@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion' 
-import  profileImage from '@/public/sebastian-image.jpg'
+import  profileImage from '@/public/sebastian-image.png'
 
 import Link from 'next/link'
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
@@ -24,7 +24,7 @@ export function Intro({}: Props) {
                 height={300}
                 quality={95}
                 alt='Sebastian Sanchez Isame image'
-                className='h-24 w-24 rounded-full border-[0.35rem] border-white shadow-xl object-cover'
+                className='h-32 w-32 rounded-full border-[0.35rem] border-white shadow-xl object-cover'
             />
         </motion.div>
         <motion.h1
