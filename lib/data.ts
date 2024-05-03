@@ -5,30 +5,31 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import { SectionName } from "@/global/models/shared.type";
 
 export const links = [
   {
-    name: "Home",
+    name: SectionName.home,
     hash: "#home",
   },
   {
-    name: "About",
+    name: SectionName.about,
     hash: "#about",
   },
   {
-    name: "Projects",
+    name: SectionName.projects,
     hash: "#projects",
   },
   {
-    name: "Skills",
+    name: SectionName.skills,
     hash: "#skills",
   },
   {
-    name: "Experience",
+    name: SectionName.experience,
     hash: "#experience",
   },
   {
-    name: "Contact",
+    name: SectionName.contact,
     hash: "#contact",
   },
 ] as const;
