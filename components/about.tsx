@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SectionHeading } from "./sectionHeading";
+import { SectionName } from "@/global/models/shared.type";
 
 type Props = {};
 
@@ -12,7 +13,7 @@ export function About({}: Props) {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.125 }}
-      id="about"
+      id={`${SectionName.about}`}
     >
       <SectionHeading>About me</SectionHeading>
       <p>

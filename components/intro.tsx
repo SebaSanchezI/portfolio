@@ -8,6 +8,7 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { SectionName } from "@/global/models/shared.type";
 
 type Props = {};
 
@@ -15,7 +16,7 @@ export function Intro({}: Props) {
   return (
     <section
       className="z-[2] flex flex-col items-center justify-center scroll-mt-28"
-      id="home"
+      id={`${SectionName.home}`}
     >
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
