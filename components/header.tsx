@@ -1,16 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
 import Link from "next/link";
+import { useActiveSectionContext } from "@/context";
+import { links } from "@/lib/data";
 import { SectionName } from "@/global/models/shared.type";
 
 type Props = {};
 
 export function Header({}: Props) {
-  const [activeSection, setActiveSection] = useState<SectionName>(
-    SectionName.home
-  );
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
+  const handleClic = (linkName: SectionName) => {
+    setActiveSection(linkName);
+    setTimeOfLastClick(Date.now());
+  };
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -31,7 +35,7 @@ export function Header({}: Props) {
                 href={link.hash}
                 className={`flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition capitalize
                 ${link.name === activeSection ? "text-gray-950" : ""}`}
-                onClick={() => setActiveSection(link.name)}
+                onClick={() => handleClic(link.name)}
               >
                 {link.name}
                 {link.name.toLowerCase() === activeSection && (
