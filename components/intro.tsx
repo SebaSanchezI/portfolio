@@ -1,22 +1,27 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import profileImage from "@/public/sebastian-image.png";
 
+import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+
+import profileImage from "@/public/sebastian-image.png";
 import { SectionName } from "@/global/models/shared.type";
+import { useInViewSection } from "@/lib/hooks";
 
 type Props = {};
 
 export function Intro({}: Props) {
+  const { ref } = useInViewSection({ sectionName: SectionName.home });
+
   return (
     <section
       className="z-[2] flex flex-col items-center justify-center scroll-mt-28"
       id={`${SectionName.home}`}
+      ref={ref}
     >
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
