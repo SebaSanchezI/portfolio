@@ -16,7 +16,7 @@ export function Projects({}: Props) {
   });
 
   return (
-    <section className="scroll-mt-28" id={`${SectionName.projects}`} ref={ref}>
+    <section className='scroll-mt-28 mb-28' id={`${SectionName.projects}`} ref={ref}>
       <SectionHeading>My Projects</SectionHeading>
       <div>
         {projectsData.map((project, idx) => (
