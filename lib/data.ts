@@ -6,6 +6,7 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import { SectionName } from "@/global/models/shared.type";
+import { VerticalTimelineItem } from "@/components/experience";
 
 export const links = [
   {
@@ -34,7 +35,7 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData = [
+export const experiencesData: VerticalTimelineItem[] = [
   {
     title: "Graduated bootcamp",
     location: "Miami, FL",
@@ -59,7 +60,7 @@ export const experiencesData = [
     icon: React.createElement(FaReact),
     date: "2021 - present",
   },
-] as const;
+];
 
 export const projectsData = [
   {
