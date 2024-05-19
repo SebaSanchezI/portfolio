@@ -13,7 +13,7 @@ export function Experience() {
     threshold: 0.75,
   });
   return (
-    <section className='mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-48' id={`${SectionName.experience}`} ref={ref}>
+    <section className='mb-40 max-w-[53rem] scroll-mt-28 text-center sm:mb-48' id={`${SectionName.experience}`} ref={ref}>
     <SectionHeading>My Experience</SectionHeading>
     <TimelineVertical items={experiencesData} />
   </section>

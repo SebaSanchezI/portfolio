@@ -25,13 +25,13 @@ export function Project({ title, description, tags, imageUrl, github, web }: Pro
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[50rem] min-h-80 rounded-lg border border-black/5 overflow-hidden relative sm:pr-8 dm:h-[20rem] sm:mb-8 last:mb-0 group-even:pl-8 hover:bg-gray-200">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[60%] flex flex-col h-full group-even:ml-[18rem]">
+      <section className="bg-gray-100 w-full p-4 md:p-0 md:w-[50rem] md:max-w-[50rem] sm:max-h-[500px] md:max-h-[300px] md:h-[22rem] rounded-lg border border-black/5 overflow-hidden relative md:pr-8 md:mb-8 last:mb-0 md:group-even:pl-8 hover:bg-gray-200">
+        <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 md:max-w-[60%] flex flex-col h-full items-center md:items-start md:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed">{description}</p>
-          <ul className="flex flex-wrap mt-auto gap-2 sm:mt-4">
+          <ul className="flex flex-wrap  gap-2 mt-4 ">
             {tags.map((tag, idx) => (
               <li
                 key={idx}
@@ -41,7 +41,7 @@ export function Project({ title, description, tags, imageUrl, github, web }: Pro
               </li>
             ))}
           </ul>
-          <div className="flex mt-6">
+          <div className="flex mt-4">
             <Link
               href={github}
               target="_blank"
@@ -56,12 +56,13 @@ export function Project({ title, description, tags, imageUrl, github, web }: Pro
           </Link>
           </div>
         </div>
-
         <Image
           src={imageUrl}
           alt={title}
           quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+          className="
+          w-full
+          md:absolute md:block top-8 -right-40 md:w-[28.25rem] rounded-t-lg shadow-2xl
           transition 
           group-hover:scale-[1.04]
           group-hover:-translate-x-3
