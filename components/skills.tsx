@@ -27,7 +27,7 @@ export function Skills() {
     threshold: 0.5,
   });
   return (
-    <section className='mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-48' id={`${SectionName.skills}`} ref={ref}>
+    <section className='mb-40 max-w-[53rem] scroll-mt-28 text-center sm:mb-48' id={`${SectionName.skills}`} ref={ref}>
       <SectionHeading>My Skills</SectionHeading>
       <ul className='flex flex-wrap justify-center gap-2 text-lg text-gray-800'>
         {

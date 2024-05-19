@@ -1,10 +1,9 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import pirenariumImg from "@/public/pirenarium.png";
+import integraImg from "@/public/integra.png";
+import storeChallengeImg from "@/public/store-challenge.png";
 import { SectionName } from "@/global/models/shared.type";
 import { VerticalTimelineItem } from "@/components/experience";
 
@@ -37,52 +36,68 @@ export const links = [
 
 export const experiencesData: VerticalTimelineItem[] = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated Domingo Guzman Silva Institute",
+    location: "Santa Fe, Santa Fe, Argentina.",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated after 3 years of studying. I learned the basics of software development.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2010 - 2013",
+  },
+  {
+    title: "Graduated Soy Henry bootcamp",
+    location: "Santa Fe, Santa Fe, Argentina.",
+    description:
+      `I graduated after 5 months of studying.
+       I learned the basics of the Web Development, from the Frontend to the Backend.
+       I immediately found a job as a front-end developer.`,
+    icon: React.createElement(LuGraduationCap),
+    date: "2021",
   },
   {
     title: "Front-End Developer",
-    location: "Orlando, FL",
+    location: "Orlando, Florida, USA.",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      `I've worked as a front-end developer for the last 2 years and half.
+      The main technology is React Js but I worked with others like Angular and Vue.
+      I work in multidisciplinary teams with agile methodologies.`,
     icon: React.createElement(FaReact),
     date: "2021 - present",
-  },
+  }
 ];
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Pirenarium Hotel",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      `I worked as a Front-end developer on this project. 
+      This is a landing page of a hotel in Spain.
+      It has Dark mode and Internacionalization (Spanish and English).`,
+    tags: ["React", "Typescript", "Material UI"],
+    imageUrl: pirenariumImg,
+    github: 'https://github.com/SebaSanchezI/pirenarium',
+    web: 'https://sebasanchezi.github.io/pirenarium/'
   },
   {
-    title: "rmtDev",
+    title: "Integra",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      `Integra is an app oriented to the health branch.
+      Integra App is a project carried out by 8 people within the Soy Henry bootcamp. 
+      SCRUM was implemented as agile methodology, with weekly sprint.  
+      `,
+    tags: ["React", "Redux", "Material UI", "Firebase", "Supabase"],
+    imageUrl: integraImg,
+    github: 'https://github.com/Ululette/IntegraApp',
+    web: 'https://integra-platform.web.app/'
   },
   {
-    title: "Word Analytics",
+    title: "Store Challenge",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      `Design and development of a RESTful web application to manage the users of different stores.
+      It offers a Login, CRUD, and statistics dynamically.`,
+    tags: ["React", "Redux", "Material UI", "Node JS", "Express JS", "Sequelize", "Postgres", "Swagger"],
+    imageUrl: storeChallengeImg,
+    github: 'https://github.com/SebaSanchezI/StoresChallenge',
+    web: ''
   },
 ] as const;
 
