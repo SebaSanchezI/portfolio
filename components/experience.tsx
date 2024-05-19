@@ -47,7 +47,7 @@ const moveLine = {
 const moveDown = {
   initial: {
     opacity: 0,
-    y: -50
+    y: -90,
   },
   animate: (index: number) => ({
     opacity: 1,
@@ -63,7 +63,10 @@ export default function TimelineVertical({ items }: VerticalTimelineProps) {
   return (
     <motion.div 
       id='timeline' 
-      className='relative max-w-7xl my-24 mx-auto after:content-[""] after:absolute after:w-1 after:h-full after:bg-gray-300 after:top-0 after:left-1/2 after:-ml-1 after:-z-10'
+      className='relative mx-auto my-10 mt-10 left-8
+        after:-left-8 max-w-7xl sm:my-24 after:content-[""] 
+        after:absolute after:w-1 after:h-full after:bg-gray-300 after:top-0 
+        sm:after:left-1/2 after:-ml-1 after:-z-10'
       variants={moveLine}
       initial='initial'
       whileInView='animate'
@@ -75,7 +78,7 @@ export default function TimelineVertical({ items }: VerticalTimelineProps) {
         <motion.div 
           id='container' 
           key={item.title} 
-          className='relative'
+          className='relative w-full pl-8 sm:pl-0 sm:pr-0'
           variants={moveDown}
           initial='initial'
           whileInView='animate'
@@ -84,17 +87,21 @@ export default function TimelineVertical({ items }: VerticalTimelineProps) {
           }}
           custom={idx}
         >
+          {React.cloneElement(item.icon, 
+              { className: `bg-white !text-5xl absolute border border-black/[0.1] 
+              top-8 z-10 rounded-full p-1 -left-[3.6rem] -translate-x-0 sm:left-1/2 sm:-translate-x-1/2` 
+              })}
           <div
-            className={`relative py-1 w-1/2 text-left ${idx % 2 === 0 ? '-left-1 pr-10' : 'left-1/2 pl-10'}`}>
-            {React.cloneElement(item.icon, { className: `bg-white !text-5xl absolute border border-black/[0.1] ${idx % 2 === 0 ? '-right-[25px]' : '-left-[25px]'} top-8 z-10 rounded-full p-1` })}
+            className={`relative py-1 w-full sm:w-1/2 text-left left-0  ${idx % 2 === 0 ? 'sm:-left-1 sm:pr-10' : 'sm:left-1/2 sm:pl-10'}`}>
             <div id='textBox' className='realtive p-5 bg-white rounded-lg border border-black/[0.1]'>
               <h2 className='font-semibold capitalized'>{item.title}</h2>
               <p className='font-normal !mt-0'>{item.location}</p>
               <p className='font-normal !mt-0'>{item.description}</p>
               <span 
-                className={`h-0 w-0 absolute top-10 z-0 ${idx % 2 === 0 ? 'right-[26px]' : 'left-[26px]'} 
+                className={`h-0 w-0 absolute top-10 z-30 border-white 
+                ${idx % 2 === 0 ? 'right-full sm:right-[26px]' : '-left-[15px] sm:left-[26px]'} 
                 border-t-[15px] border-b-[15px] border-y-transparent border-solid
-                ${idx % 2 === 0 ? 'border-l-[15px]' : 'border-r-[15px]'} border-white `}></span>
+                ${idx % 2 === 0 ? 'border-l-0 border-r-[15px] sm:border-l-[15px] sm:border-r-0' : 'border-r-[15px]'} `}></span>
             </div>
           </div>
         </motion.div>

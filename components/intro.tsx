@@ -19,7 +19,7 @@ export function Intro({}: Props) {
 
   return (
     <section
-      className="z-[2] flex flex-col items-center justify-center scroll-mt-28"
+      className="z-[2] flex flex-col items-center justify-center scroll-mt-28 max-w-[45rem]"
       id={`${SectionName.home}`}
       ref={ref}
     >
