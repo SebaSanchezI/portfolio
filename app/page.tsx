@@ -1,4 +1,5 @@
 import { About, Intro, Projects, SectionDivider, Skills } from "@/components";
+import { Contact } from "@/components/contact";
 import { Experience } from "@/components/experience";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Experience />
+      <Contact />
     </main>
   );
 }
