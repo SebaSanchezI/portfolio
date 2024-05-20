@@ -22,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body className={`${monserrat.className} bg-bgLight relative`}>
-        <div className="bg-divLeftBlur absolute top-[-6rem] left-1/2 -translate-x-3/4 h-[41.25rem] w-[31.25rem] ronded-full blur-[10rem]"></div>
-        <div className="bg-divRightBlur absolute top-[-1rem] left-1/2 h-[31.25rem] w-[41.25rem] ronded-full blur-[10rem]"></div>
+        <div className="bg-divLeftBlur absolute top-[-6rem] h-[41.25rem] w-[11.25rem] md:w-[31.25rem] lg:w-[41.25rem] 2xl:w-[55.25rem] ronded-full blur-[10rem]"></div>
+        <div className="bg-divRightBlur absolute top-[-1rem] left-1/2 h-[31.25rem] w-[11.25rem] md:w-[31.25rem] lg:w-[41.25rem] 2xl:w-[55.25rem] ronded-full blur-[10rem]"></div>
         <ActiveSectionContextProvider>
           <>
             <Header />
