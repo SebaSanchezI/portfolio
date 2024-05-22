@@ -27,7 +27,7 @@ export function Project({ title, description, tags, imageUrl, github, web }: Pro
       }}
       className="group mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 w-full p-4 md:p-0 md:w-[50rem] md:max-w-[50rem] sm:max-h-[500px] md:max-h-[300px] md:h-[22rem] rounded-lg border border-black/5 overflow-hidden relative md:pr-8 md:mb-8 last:mb-0 md:group-even:pl-8 hover:bg-gray-200">
+      <section className="bg-gray-100 w-full p-4 md:p-0 md:w-[50rem] md:max-w-[50rem] sm:max-h-[31rem] md:max-h-[23rem] md:h-[22rem] rounded-lg borderBlack overflow-hidden relative md:pr-8 md:mb-8 last:mb-0 md:group-even:pl-8 hover:bg-gray-200">
         <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 md:max-w-[60%] flex flex-col h-full items-center md:items-start md:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed">{description}</p>
