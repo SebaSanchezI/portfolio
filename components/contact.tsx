@@ -4,6 +4,7 @@ import { SectionHeading } from './sectionHeading'
 import { FaPaperPlane } from 'react-icons/fa'
 import { useInViewSection } from '@/lib/hooks'
 import { SectionName } from '@/global/models/shared.type'
+import { useActiveSectionContext } from '@/context'
 
 type Props = {}
 
@@ -12,6 +13,12 @@ export function Contact (props: Props) {
     sectionName: SectionName.contact, 
     threshold: 0.5, 
   });
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+  useActiveSectionContext()
+  const handleClic = () => {
+    setActiveSection(SectionName.contact)
+    setTimeOfLastClick(Date.now())
+  }
   return (
     <motion.section id='contact'
       ref={ref}
@@ -55,6 +62,7 @@ export function Contact (props: Props) {
         <button 
           type='submit'
           className='group flex items-center justify-center gap-2 h-12 w-full sm:w-32 bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-105 hover:bg-gray-950'
+          onClick={handleClic}
         >
           Submit 
           <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1'/>
