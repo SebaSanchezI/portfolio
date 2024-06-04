@@ -1,20 +1,20 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { useActiveSectionContext } from "@/context";
-import { links } from "@/lib/data";
-import { SectionName } from "@/global/models/shared.type";
+"use client"
+import React from "react"
+import { motion } from "framer-motion"
+import Link from "next/link"
+import { useActiveSectionContext } from "@/context"
+import { links } from "@/lib/data"
+import { SectionName } from "@/global/models/shared.type"
 
-type Props = {};
+type Props = {}
 
 export function Header({}: Props) {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+    useActiveSectionContext()
   const handleClic = (linkName: SectionName) => {
-    setActiveSection(linkName);
-    setTimeOfLastClick(Date.now());
-  };
+    setActiveSection(linkName)
+    setTimeOfLastClick(Date.now())
+  }
   return (
     <header className="z-[999] relative">
       <motion.div

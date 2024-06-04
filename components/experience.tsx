@@ -13,7 +13,7 @@ export function Experience() {
     threshold: 0.75,
   });
   return (
-    <section className='mb-40 max-w-[53rem] scroll-mt-28 text-center sm:mb-48' id={`${SectionName.experience}`} ref={ref}>
+    <section className='mb-40 max-w-[20rem] sm:max-w-[40rem] lg:max-w-[53rem] scroll-mt-28 text-center sm:mb-48' id={`${SectionName.experience}`} ref={ref}>
     <SectionHeading>My Experience</SectionHeading>
     <TimelineVertical items={experiencesData} />
   </section>
@@ -88,12 +88,12 @@ export default function TimelineVertical({ items }: VerticalTimelineProps) {
           custom={idx}
         >
           {React.cloneElement(item.icon, 
-              { className: `bg-primary !text-5xl absolute border border-black/[0.1] text-white
+              { className: `bg-primary !text-5xl absolute borderBlack text-white
               top-8 z-10 rounded-full p-1 -left-[3.6rem] -translate-x-0 sm:left-1/2 sm:-translate-x-1/2` 
               })}
           <div
             className={`relative py-1 w-full sm:w-1/2 text-left left-0  ${idx % 2 === 0 ? 'sm:-left-1 sm:pr-10' : 'sm:left-1/2 sm:pl-10'}`}>
-            <div id='textBox' className='realtive p-5 bg-white rounded-lg border border-black/[0.1]'>
+            <div id='textBox' className='realtive p-5 bg-white rounded-lg borderBlack'>
               <h2 className='font-bold capitalized'>{item.title}</h2>
               <p className='font-semibold !mt-0 italic'>{item.date}</p>
               <p className='font-normal !mt-0'>{item.location}</p>
