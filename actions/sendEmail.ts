@@ -1,6 +1,6 @@
 'use server'
 import { validateString } from '@/lib/utils'
-import { EmailTemplate } from '@/components/emailTemplate'
+import { ContactFormEmailTemplate } from '@/emails/contactForm'
 import { Resend } from 'resend'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -28,8 +28,8 @@ export async function sendEmail (formData: FormData) {
       from: 'Contact form <onboarding@resend.dev>',
       to: ['sebastian.sanchezisame@outlook.com'],
       subject: 'Thank you',
-      // reply_to: senderEmail,
-      react: EmailTemplate({ message: bodyEmail }),
+      reply_to: senderEmail,
+      react: ContactFormEmailTemplate ({ message: bodyEmail, senderEmail }),
     })
 
     if (error) {
