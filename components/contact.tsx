@@ -1,11 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
 import { SectionHeading } from './sectionHeading'
-import { FaPaperPlane } from 'react-icons/fa'
 import { useInViewSection } from '@/lib/hooks'
 import { SectionName } from '@/global/models/shared.type'
 import { useActiveSectionContext } from '@/context'
 import { sendEmail } from '@/actions/sendEmail'
+import SubmitButton from './submitButton'
+import toast from 'react-hot-toast'
 
 type Props = {}
 
@@ -20,6 +21,7 @@ export function Contact (props: Props) {
     setActiveSection(SectionName.contact)
     setTimeOfLastClick(Date.now())
   }
+
 
   return (
     <motion.section id='contact'
@@ -51,7 +53,9 @@ export function Contact (props: Props) {
         className='flex flex-col gap-2 mt-10'
         action={async (formData) => {
           const resp = await sendEmail(formData)
-          alert(resp.message)
+          console.log(resp.message as string)
+          if (resp.status === 'success') toast.success(resp.message as string) 
+          else toast.error(resp.message as string)
         }}
       >
         <input
@@ -69,14 +73,7 @@ export function Contact (props: Props) {
           required
           maxLength={1000}
         />
-        <button 
-          type='submit'
-          className='group flex items-center justify-center gap-2 h-12 w-full sm:w-32 bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-105 hover:bg-gray-950'
-          onClick={handleClic}
-        >
-          Submit 
-          <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1'/>
-        </button>
+        <SubmitButton handleClic={handleClic} />
       </form>
     </motion.section>
   )

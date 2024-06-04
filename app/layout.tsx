@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components";
 import { ActiveSectionContextProvider } from "@/context";
+import { Toaster } from "react-hot-toast";
 
 const monserrat = Montserrat({
   variable: "--font-monserrat",
@@ -28,6 +29,7 @@ export default function RootLayout({
           <>
             <Header />
             {children}
+            <Toaster position="top-right"/>
           </>
         </ActiveSectionContextProvider>
       </body>

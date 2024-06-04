@@ -35,7 +35,7 @@ export async function sendEmail (formData: FormData) {
     if (error) {
       return {
         status: 'error',
-        message: error
+        message: error.message
       }
     }
 
