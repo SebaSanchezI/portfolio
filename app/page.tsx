@@ -1,6 +1,7 @@
-import { About, Intro, Projects, SectionDivider, Skills } from "@/components";
-import { Contact } from "@/components/contact";
-import { Experience } from "@/components/experience";
+import { About, Intro, Projects, Skills } from "@/components"
+import { Contact } from "@/components/contact"
+import { Experience } from "@/components/experience"
+import Footer from "@/components/footer"
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Contact />
+      <Footer />
     </main>
   );
 }
