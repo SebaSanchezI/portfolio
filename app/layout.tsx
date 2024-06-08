@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${monserrat.className}  pt-28 sm:pt-36 bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark dark:text-opacity-90 relative`}>
+      <body className={`${monserrat.className}  pt-36 sm:pt-36 bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark dark:text-opacity-90 relative`}>
         <div className="bg-divLeftBlur dark:bg-[#946263] absolute top-[-6rem] h-[41.25rem] w-[11.25rem] md:w-[31.25rem] lg:w-[41.25rem] 2xl:w-[55.25rem] ronded-full blur-[10rem]"></div>
         <div className="bg-divRightBlur dark:bg-[#676394] absolute top-[-1rem] left-1/2 h-[31.25rem] w-[11.25rem] md:w-[31.25rem] lg:w-[41.25rem] 2xl:w-[55.25rem] ronded-full blur-[10rem]"></div>
         <ThemeContextProvider>
