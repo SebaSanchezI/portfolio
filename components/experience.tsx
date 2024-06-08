@@ -66,7 +66,8 @@ export default function TimelineVertical({ items }: VerticalTimelineProps) {
       className='relative mx-auto my-10 mt-10 left-8
         after:-left-8 max-w-7xl sm:my-24 after:content-[""] 
         after:absolute after:w-1 after:h-full after:bg-gray-300 after:top-0 
-        sm:after:left-1/2 after:-ml-1 after:-z-10'
+        sm:after:left-1/2 after:-ml-1 after:-z-10
+        dark:after:bg-white/10'
       variants={moveLine}
       initial='initial'
       whileInView='animate'
@@ -90,7 +91,7 @@ export default function TimelineVertical({ items }: VerticalTimelineProps) {
           {React.cloneElement(item.icon, 
               { className: `bg-primary !text-5xl absolute borderBlack text-white
               top-8 z-10 rounded-full p-1 -left-[3.6rem] -translate-x-0 sm:left-1/2 sm:-translate-x-1/2
-              dark:bg-white dark:text-textLight` 
+              dark:bg-gray-950 dark:text-white/80` 
               })}
           <div
             className={`relative py-1 w-full sm:w-1/2 text-left left-0 

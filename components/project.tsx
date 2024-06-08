@@ -27,11 +27,13 @@ export function Project({ title, description, tags, imageUrl, github, web }: Pro
       }}
       className="group mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 w-full p-4 md:p-0 md:w-[50rem] md:max-w-[50rem] sm:max-h-[31rem] md:max-h-[23rem] md:h-[22rem] rounded-lg borderBlack overflow-hidden relative md:pr-8 md:mb-8 last:mb-0 md:group-even:pl-8 hover:bg-gray-200">
+      <section className="bg-gray-100 w-full p-4 md:p-0 md:w-[50rem] md:max-w-[50rem] sm:max-h-[31rem] 
+      md:max-h-[23rem] md:h-[22rem] rounded-lg borderBlack overflow-hidden relative md:pr-8 md:mb-8 
+      last:mb-0 md:group-even:pl-8 hover:bg-gray-200 dark:bg-white/10  dark:hover:bg-white/20 dark:text-white">
         <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 md:max-w-[60%] flex flex-col h-full items-center md:items-start md:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
+          <h3 className="text-2xl font-semibold dark:text-white">{title}</h3>
           <p className="mt-2 leading-relaxed">{description}</p>
-          <ul className="flex flex-wrap  gap-2 mt-4 ">
+          <ul className="flex flex-wrap  gap-2 mt-4 dark:text-white/70">
             {tags.map((tag, idx) => (
               <li
                 key={idx}
@@ -46,13 +48,13 @@ export function Project({ title, description, tags, imageUrl, github, web }: Pro
               href={github}
               target="_blank"
             >
-              <FaGithub className="!text-3xl mr-4 text-primary transition hover:scale-125 cursor-pointer" />
+              <FaGithub className="!text-3xl mr-4 text-primary transition hover:scale-125 cursor-pointer dark:text-white/70" />
           </Link>
             <Link
               href={web}
               target="_blank"
             >
-              <TbWorldWww className="!text-3xl mr-4 text-primary transition hover:scale-125 cursor-pointer" />
+              <TbWorldWww className="!text-3xl mr-4 text-primary transition hover:scale-125 cursor-pointer dark:text-white/70" />
           </Link>
           </div>
         </div>
