@@ -61,14 +61,14 @@ export function Contact (props: Props) {
         <input
           name='senderEmail'
           type='email' 
-          className='h-14 rounded-lg borderBlack p-4 focus:border-2 focus:border-gray-900 focus:outline-none'
+          className='h-14 rounded-lg borderBlack p-4 focus:border-2 focus:border-gray-900 focus:outline-none dark:bg-bgDark dark:border-white/20 dark:focus:border-white/50'
           placeholder='Your e-mail'
           required
         />
         <textarea 
           name='bodyEmail' 
           id=''
-          className='min-h-52 my-3 rounded-lg borderBlack p-4 focus:border-2 focus:border-gray-900 focus:outline-none'
+          className='min-h-52 my-3 rounded-lg borderBlack p-4 focus:border-2 focus:border-gray-900 focus:outline-none dark:bg-bgDark dark:border-white/20 dark:focus:border-white/50'
           placeholder='Your message'
           required
           maxLength={1000}

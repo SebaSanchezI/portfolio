@@ -61,7 +61,9 @@ export function Intro({}: Props) {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 transition cursor-pointer borderBlack"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full 
+          outline-none focus:scale-110 hover:scale-105 transition cursor-pointer 
+          borderBlack dark:bg-white/10 dark:hover:bg-white/20"
           href="/cv.pdf"
           download
         >
@@ -69,14 +71,18 @@ export function Intro({}: Props) {
           <HiDownload className="opacity-70 group-hover:translate-y-1 transition" />
         </a>
         <a
-          className="bg-white px-4 py-4 text-gray-700 text-[1.35rem] flex items-center justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 hover:scale-[1.15] borderBlack hover:text-gray-950"
+          className="bg-white px-4 py-4 text-gray-700 text-[1.35rem] flex items-center 
+          justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 
+          hover:scale-[1.15] borderBlack hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
           href="https://www.linkedin.com/in/sebastiansanchezisame/"
           target="_blank"
         >
           <BsLinkedin />
         </a>
         <a
-          className="bg-white px-4 py-4 text-gray-700 text-[1.65rem] flex items-center justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 hover:scale-[1.15] borderBlack hover:text-gray-950"
+          className="bg-white px-4 py-4 text-gray-700 text-[1.65rem] flex items-center 
+          justify-center gap-2 rounded-full cursor-pointer outline-none focus:scale-110 
+          hover:scale-[1.15] borderBlack hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
           href="https://github.com/SebaSanchezI"
           target="_blank"
         >
