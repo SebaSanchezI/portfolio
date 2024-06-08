@@ -89,20 +89,29 @@ export default function TimelineVertical({ items }: VerticalTimelineProps) {
         >
           {React.cloneElement(item.icon, 
               { className: `bg-primary !text-5xl absolute borderBlack text-white
-              top-8 z-10 rounded-full p-1 -left-[3.6rem] -translate-x-0 sm:left-1/2 sm:-translate-x-1/2` 
+              top-8 z-10 rounded-full p-1 -left-[3.6rem] -translate-x-0 sm:left-1/2 sm:-translate-x-1/2
+              dark:bg-white dark:text-textLight` 
               })}
           <div
-            className={`relative py-1 w-full sm:w-1/2 text-left left-0  ${idx % 2 === 0 ? 'sm:-left-1 sm:pr-10' : 'sm:left-1/2 sm:pl-10'}`}>
-            <div id='textBox' className='realtive p-5 bg-white rounded-lg borderBlack'>
+            className={`relative py-1 w-full sm:w-1/2 text-left left-0 
+            ${idx % 2 === 0 ? 'sm:-left-1 sm:pr-10' : 'sm:left-1/2 sm:pl-10'}`}>
+            <div id='textBox' className='realtive p-5 bg-white rounded-lg borderBlack dark:bg-white/10 dark:border-none dark:text-white/80 z-0'>
               <h2 className='font-bold capitalized'>{item.title}</h2>
               <p className='font-semibold !mt-0 italic'>{item.date}</p>
               <p className='font-normal !mt-0'>{item.location}</p>
               <p className='font-normal !mt-0'>{item.description}</p>
               <span 
-                className={`h-0 w-0 absolute top-10 z-30 border-white 
-                ${idx % 2 === 0 ? 'right-full sm:right-[26px]' : '-left-[15px] sm:left-[26px]'} 
-                border-t-[15px] border-b-[15px] border-y-transparent border-solid
-                ${idx % 2 === 0 ? 'border-l-0 border-r-[15px] sm:border-l-[15px] sm:border-r-0' : 'border-r-[15px]'} `}></span>
+                className={`h-0 w-0 absolute top-10 z-30 border-white dark:border-white/10
+                ${idx % 2 === 0 ? 'right-[99.4%] dark:right-[100%] sm:right-[26px] dark:sm:right-[25px]' : '-left-[14px] dark:-left-[15px] sm:left-[26px] dark:sm:left-[25px]'} 
+                border-t-[15px] border-b-[15px] border-y-transparent dark:border-y-transparent border-solid
+                ${idx % 2 === 0 ? 'border-l-0 border-r-[15px] sm:border-l-[15px] sm:border-r-0' : 'border-r-[15px]'} 
+                `}></span>
+              <span 
+                className={`dark:hidden h-0 w-0 absolute top-10 z-20 border-black/10
+                ${idx % 2 === 0 ? 'right-full sm:right-[25px]' : '-left-[15px] sm:left-[25px]'} 
+                border-t-[15px] border-b-[15px] border-y-transparent dark:border-y-transparent border-solid
+                ${idx % 2 === 0 ? 'border-l-0 border-r-[15px] sm:border-l-[15px] sm:border-r-0' : 'border-r-[15px]'} 
+                `}></span>
             </div>
           </div>
         </motion.div>
