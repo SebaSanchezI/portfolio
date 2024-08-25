@@ -25,7 +25,7 @@ const config: Config = {
         tertiary: "#8854d0",
         tertiaryHover: "#a55eea",
         bgLight: colors.gray[50],
-        bgDark: "#4b6584",
+        bgDark: colors.gray[900],
         textLight: colors.gray[800],
         textDark: colors.gray[200],
         divLeftBlur: "#fbe2b3",
@@ -34,5 +34,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: 'class'
 };
 export default config;
